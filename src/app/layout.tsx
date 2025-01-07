@@ -2,13 +2,11 @@ import { Inter } from 'next/font/google'
 import { AuthProvider } from '@/components/AuthProvider'
 import Navigation from '@/components/Navigation'
 import './globals.css'
+import { constructMetadata } from '@/lib/metadata'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Your App Name',
-  description: 'Your app description',
-}
+export const metadata = constructMetadata();
 
 export default function RootLayout({
   children,
